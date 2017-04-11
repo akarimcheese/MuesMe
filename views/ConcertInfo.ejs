@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Concert Info</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../concertStyle.css">
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <script type='text/javascript' src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+
+  <script type='text/javascript' src='../infoJavascript.js'></script>
+</head>
+
+<%
+	function getIDs(artist) {
+		return artist.id
+	}
+%>
+
+
+<body>
+	<div class="header"></div>
+	<br/>
+	<div class="header-text">
+		<h1>CONCERT LINEUP</h1>
+	</div>
+	<div class="instructions">
+		<h2>The best artists in the work. Hear them live!
+		<h2>Click on an artist to hear their playlist, or click <a href="playlist?artists=<%= artists.map(getIDs).join() %>">here</a> to listen to a conjoined playlist!
+	</div>
+	<br/>
+	<div id="artistList">
+		<% for(var i=0; i<artists.length; i++) {%>
+		   <div>
+		   		<img class="artistImg" id="img1<%= i + 1 %>" src="<%= artists[i].img %>" height="200" width="200"/>
+		   		<h3><a class="artistPlaylist" href="/playlist?artists=<%= artists[i].id %>"><%= artists[i].name %></a></h3>
+		   </div>
+		<% } %>
+		<!--
+		<div>
+	    	<img id="img1" src="kendrick.jpeg" height="200" width="200"/>
+	    	<h3>Kendick Lamar</h3>
+	    </div>
+	    <div>
+	    	<img id="img2" src="john.jpeg" height="200" width="200"/>
+	    	<h3>John Mayer</h3>
+	    </div>
+	    <div>
+			<img id="img3" src="adele.jpeg" height="200" width="200"/>
+			<h3>Adele</h3>
+		</div>
+		<div>
+	    	<img id="img4" src="martin.jpeg" height="200" width="200"/>
+	    	<h3>Martin Garrix</h3>
+	   	</div>
+	   -->
+	</div>
+<br>
+<br>
+<br>
+<br>
+
+	<div class="generatedEvents">
+		<!-- Use javascript to dynamically create the list of events (Max of 10)
+			<div class = "event">
+		-->
+	</div>
+
+	<div class="footer">
+		<div class = "partner"> <!--Add a class to this div -->
+			<div id = "footer-text">
+			    <h4>Developed at Bitcamp 2017 by Ayman Karim, Vik Yabannavar, Michael Nguyen, and Kevin Fu </h4>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

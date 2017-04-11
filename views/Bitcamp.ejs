@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tunes</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Quicksand:300,700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="set1.css"/>
+  <script src="classie.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="jquery-ui-1.10.3/ui/jquery.ui.datepicker.js"></script>
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="demo.css" />
+  <script type="text/javascript" src="javascript.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+  	<div class="header">
+    	<div id="header-text"> <!--Add an id to this div -->
+      		<h1>Don't Know Whether to Attend a Concert?</h1>
+    	</div>
+	    <div id="sub-header-text">
+	      	<h2>We can generate a playlist for you based on the artists' most popular songs to help you decide.</h2>
+	    </div>
+
+    	<div class="arrow bounce"></div>
+  	</div>  
+  	<div class="venues">
+  		<div id="venues-header">
+  			<h1>Let's narrow your search!</h2>
+  		</div>
+  		<div id="venues-text">
+			<h2>Which venue will you be going to?</h2>
+			<form id="getEvents" action = "/events" method = "GET">
+			<input id="venue-name" name='venue' id='venue' type="text" placeholder="Venue Name"/>
+		
+			<h2>Which venue will you be going to?</h2> 
+			
+			<h2>What range of dates are you considering?</h2>
+			<h3>Start Date:</h3><input name='startdate' id="startdate" type="date"/>
+			<h3>End Date:</h3><input name='enddate' id="enddate" type="date"/>
+			</br>
+			</br>
+			</br>
+			</br>
+			
+			<button class="button withanimation"><span>Submit</span></button>
+			</form>
+		</div>
+	</div>
+	<div>
+		<div class="waiting">
+			<h5>Please give us a moment while we find the right concerts for you!</h5>
+			<div class = "waiting-animation">
+				<div class="cssload-loader">
+					<div class="cssload-inner cssload-one"></div>
+					<div class="cssload-inner cssload-two"></div>
+					<div class="cssload-inner cssload-three"></div>
+				</div>
+			</div>
+		</div>
+		<div class="events">
+			<div id= "end">
+				<div class = "partner"> 
+					<div id = "footer-text">
+					    <h4>Developed at Bitcamp 2017 by Ayman Karim, Vik Yabannavar, Michael Nguyen, and Kevin Fu 
+					    </h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="eventList">
+		<div class="eventItem">
+			<p class="eventName">Migos at 9:30</p>
+			<p class="eventDate">9/20/20</p>
+		</div>
+		<hr>
+	</div>
+</body>
+</html>
