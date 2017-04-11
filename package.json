@@ -1,0 +1,31 @@
+{
+  "name": "mues.me",
+  "version": "1.0.0",
+  "description": "This example is so cool.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "music",
+    "bitcamp"
+  ],
+  "author": "ayman vik michael kevin",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "child_process": "^1.0.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.2",
+    "method-override": "^2.3.8",
+    "passport": "^0.3.2",
+    "passport-spotify": "^0.3.1"
+  },
+  "engines": {
+    "node": "4.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/akarimcheese/BitCamp.git"
+  }
+}
